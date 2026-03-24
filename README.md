@@ -81,32 +81,6 @@ End-to-end security testing workflow for Java desktop applications (JAR-based).
 
 **Deliverables:** Executive summary, security test results matrix, findings report (CVSS 3.1 + OWASP + CWE with extended schema), dynamic testing playbook, SBOM artifacts, screenshot evidence, and post-remediation re-test tracking.
 
----
-
-## Adding a New Skill
-
-1. Create a new directory at the repo root with a descriptive kebab-case name (e.g., `web-api-security-review/`).
-2. Add a `SKILL.md` file inside with YAML front matter (`name`, `description`) followed by the full workflow.
-3. Update this README by adding an entry under the **Skills** section following the format above.
-
-### Skill Template
-
-```yaml
----
-name: your-skill-name
-description: >
-  One-paragraph description covering scope, test count, and primary use cases.
----
-
-# Skill Title
-
-## Scope
-## Mandatory Rules
-## Phases / Workflow
-## Reporting
-## Quality Gates
-```
-
 ## Usage
 
 These skills are designed for use with [Cursor](https://cursor.com) AI agent mode. To use a skill:
@@ -114,7 +88,3 @@ These skills are designed for use with [Cursor](https://cursor.com) AI agent mod
 1. Clone this repo or point your Cursor skill path to the relevant `SKILL.md`.
 2. When starting a security review, reference the skill — the agent will follow the phased workflow, execute static tests autonomously, and prepare commands/payloads for dynamic tests that require user interaction.
 3. The agent will produce structured deliverables (reports, SBOMs, evidence) as defined in each skill's reporting phase.
-
-## License
-
-Private repository. All rights reserved.
