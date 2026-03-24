@@ -83,8 +83,10 @@ End-to-end security testing workflow for Java desktop applications (JAR-based).
 
 ## Usage
 
-These skills are designed for use with [Cursor](https://cursor.com) AI agent mode. To use a skill:
+These skills work with [Cursor](https://cursor.com), [Claude Code](https://docs.anthropic.com/en/docs/claude-code), or any compatible AI coding agent that can read markdown instruction files.
 
-1. Clone this repo or point your Cursor skill path to the relevant `SKILL.md`.
-2. When starting a security review, reference the skill — the agent will follow the phased workflow, execute static tests autonomously, and prepare commands/payloads for dynamic tests that require user interaction.
-3. The agent will produce structured deliverables (reports, SBOMs, evidence) as defined in each skill's reporting phase.
+**Cursor:** Place skills in your Cursor skills directory (e.g., `~/.cursor/skills/`) — the agent picks them up automatically when the task matches the skill description.
+
+**Claude Code / Codex:** Place skills in your Codex skills directory (e.g., `~/.codex/skills/`) or reference the `SKILL.md` file directly at the start of a session.
+
+**Any agent:** The skills are self-contained markdown files with no platform-specific dependencies. Point your agent to the relevant `SKILL.md` and it will follow the phased workflow, execute static tests autonomously, and prepare commands/payloads for dynamic tests that require user interaction. The agent will produce structured deliverables (reports, SBOMs, evidence) as defined in each skill's reporting phase.
